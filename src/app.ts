@@ -10,10 +10,10 @@ app.use(express.urlencoded({ extended: true }))
 
 console.log(app.get('env'))
 
-// application route
+// application route system
 app.use('/api/v1', router)
 // define the route
-app.get('/', (req: Request, res: any) => {
+app.get('/', (req: Request, res:Response) => {
   res.send('Hello World!')
 })
 
