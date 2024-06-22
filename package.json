@@ -15,6 +15,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "lint-staged": {
+    "src/**/*.ts": "npm run lint-format"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
