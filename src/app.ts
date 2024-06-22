@@ -13,7 +13,7 @@ console.log(app.get('env'))
 // application route
 app.use('/api/v1', router)
 // define the route
-app.get('/', (req: Request, res:any) => {
+app.get('/', (req: Request, res: any) => {
   res.send('Hello World!')
 })
 
