@@ -1,0 +1,15 @@
+{
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "C:\\Users\\lenovo\\OneDrive\\Desktop\\Express js\\logs\\winston\\success\\.116d244f5318185fec92c7b57414c46633884be1-audit.json",
+  "files": [
+    {
+      "date": 1718998553815,
+      "name": "C:\\Users\\lenovo\\OneDrive\\Desktop\\Express js\\logs\\winston\\success\\-22-06-2024.log",
+      "hash": "f76417d8a71cdab310102bd139f09c48a9182a8fd239c08655239d5c4cce02dd"
+    }
+  ],
+  "hashType": "sha256"
+}
