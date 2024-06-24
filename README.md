@@ -1,5 +1,4 @@
-### validator Information
-1. [validator](https://www.npmjs.com/package/validator)
+### Validator Information `[validator](https://www.npmjs.com/package/validator)`
 
 ### command use
 
