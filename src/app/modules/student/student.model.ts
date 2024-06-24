@@ -1,10 +1,32 @@
 import { Schema, model } from 'mongoose'
 import { gardian, Student, userName } from './student.interface'
+import validator from 'validator'
 
 const nameSchema = new Schema<userName>({
-  fastName: { type: String, required: [true, 'First name is required'] },
-  middleName: { type: String, required: [true, 'Middle name is required'] },
-  lastName: { type: String, required: [true, 'Last name is required'] },
+  fastName: {
+    type: String,
+    required: [true, 'First name is required'],
+    validate: {
+      validator: (value: string) => validator.isAlpha(value),
+      message: `check if the string contains only letters (a-zA-Z).`,
+    },
+  },
+  middleName: {
+    type: String,
+    required: [true, 'Middle name is required'],
+    validate: {
+      validator: (value: string) => validator.isAlpha(value),
+      message: `check if the string contains only letters (a-zA-Z).`,
+    },
+  },
+  lastName: {
+    type: String,
+    required: [true, 'Last name is required'],
+    validate: {
+      validator: (value: string) => validator.isAlpha(value),
+      message: `check if the string contains only letters (a-zA-Z).`,
+    },
+  },
 })
 
 const guardianSchema = new Schema<gardian>({
@@ -44,7 +66,14 @@ const studentSchema = new Schema<Student>(
       type: String,
       required: [true, 'Date of birth is required'],
     },
-    email: { type: String, required: [true, 'Email is required'] },
+    email: {
+      type: String,
+      required: [true, 'Email is required'],
+      validate: {
+        validator: (value: string) => validator.isEmail(value),
+        message: `{VALUE} is not vaild email type`,
+      },
+    },
     avatar: { type: String, required: [true, 'Avatar is required'] },
     contactNo: { type: String, required: [true, 'Contact number is required'] },
     emergencycontactNo: {
