@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "lint-staged": {
-    "src/**/*.ts": "npm run lint:check"
+    "src/**/*.ts": "npm run lint-format"
   },
   "dependencies": {
     "cors": "^2.8.5",

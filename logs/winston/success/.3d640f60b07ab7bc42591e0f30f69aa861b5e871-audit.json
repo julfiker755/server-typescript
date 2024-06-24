@@ -1,15 +1,20 @@
 {
-  "keep": {
-    "days": true,
-    "amount": 14
-  },
-  "auditLog": "C:\\Users\\lenovo\\OneDrive\\Desktop\\Express js\\logs\\winston\\success\\.3d640f60b07ab7bc42591e0f30f69aa861b5e871-audit.json",
-  "files": [
-    {
-      "date": 1718998623069,
-      "name": "C:\\Users\\lenovo\\OneDrive\\Desktop\\Express js\\logs\\winston\\success\\22-06-2024.log",
-      "hash": "90b8e723c32215c8ce59be0f5e8452c5277f248a59bb2eb8dee1c73c8a9f5a04"
-    }
-  ],
-  "hashType": "sha256"
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\lenovo\\OneDrive\\Desktop\\Express js\\logs\\winston\\success\\.3d640f60b07ab7bc42591e0f30f69aa861b5e871-audit.json",
+    "files": [
+        {
+            "date": 1718998623069,
+            "name": "C:\\Users\\lenovo\\OneDrive\\Desktop\\Express js\\logs\\winston\\success\\22-06-2024.log",
+            "hash": "90b8e723c32215c8ce59be0f5e8452c5277f248a59bb2eb8dee1c73c8a9f5a04"
+        },
+        {
+            "date": 1719168466065,
+            "name": "C:\\Users\\lenovo\\OneDrive\\Desktop\\Express js\\logs\\winston\\success\\24-06-2024.log",
+            "hash": "f1198d5403d546edbe562aafefc9103c2930bb2253c1f2e287d1073fd96deeaf"
+        }
+    ],
+    "hashType": "sha256"
 }
