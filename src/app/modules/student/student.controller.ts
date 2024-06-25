@@ -1,5 +1,6 @@
 import { Request, Response } from 'express'
 import studentService from './student.service'
+import studentSchema from './student.validation'
 
 const getAllStudent = async (req: Request, res: Response) => {
   try {
@@ -35,24 +36,33 @@ const singleStudent = async (req: Request, res: Response) => {
 const createStudent = async (req: Request, res: Response) => {
   try {
     const student = req.body
-    const result = await studentService.createStudentDB(student)
+    // validate data for jai
+    const { error, value } = studentSchema.validate(student)
+
+    const result = await studentService.createStudentDB(value)
     res.status(200).json({
       success: true,
       message: 'Student create successfull',
       data: result,
     })
+
+    if (error) {
+      res.status(400).json({
+        success: false,
+        message: 'Student not success',
+        error: error.details,
+      })
+    }
   } catch (err) {
     let errorMessage = 'An error occurred'
     if (err instanceof Error) {
       errorMessage = err.message
     }
-    res
-      .status(400)
-      .json({
-        success: false,
-        message: 'Student not success',
-        error: errorMessage.toString(),
-      })
+    res.status(400).json({
+      success: false,
+      message: 'Student not success',
+      error: errorMessage.toString(),
+    })
   }
 }
 
